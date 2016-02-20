@@ -19,3 +19,5 @@ MyBinder is a web application built with teachers, students and parents in mind.
 - jQuery
 - Twitter Bootstrap (less)
 - FontAwesome
+- Moment
+- Joyride
