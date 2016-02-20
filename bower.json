@@ -1,0 +1,29 @@
+{
+  "name": "mybinder",
+  "description": "project management for students, teachers and parents",
+  "main": "public/index.php",
+  "authors": [
+    "Latisha McNeel"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "education",
+    "project",
+    "management"
+  ],
+  "moduleType": [],
+  "homepage": "http://169.44.65.248/mybinder/public/",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "resources/assets/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "font-awesome": "fontawesome#^4.5.0"
+  }
+}
