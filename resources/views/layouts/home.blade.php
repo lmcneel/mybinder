@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>My Binder</title>
     <!-- Modernzr included at top -->
     <script src="{{ asset('js/modernizr.mq.js') }}"></script>
     <!-- Fonts -->
@@ -18,7 +18,7 @@
     <link href="{{ '/mybinder/public/css/joyride-2.1.css' }}" rel="stylesheet">
 
 </head>
-<body id="app-layout">
+<body id="home-layout">
     <nav class="navbar navbar-default navbar-home">
         <div class="container">
             <div class="navbar-header">
@@ -63,7 +63,6 @@
                             </ul>
                         </li>
                     @endif
-                    
                 </ul>
             </div>
         </div>
