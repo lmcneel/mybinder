@@ -11,10 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -27,11 +23,25 @@ Route::get('/', function () {
 */
 
 Route::group(['middleware' => ['web']], function () {
-    //
-});
-
-Route::group(['middleware' => 'web'], function () {
+    Route::get('/', 'WelcomeController@index');
     Route::auth();
 
     Route::get('/home', 'HomeController@index');
+    
+    Route::get('/student', 'StudentController@index');
+    Route::get('/teacher', 'TeacherController@index');
+    Route::get('/parent', 'ParentController@index');
+    Route::get('/administrator', 'AdministratorController@index');
+    
+    
+    Route::resource('school', 'SchoolController', ['except' => ['destroy']]);
+    Route::resource('schooldistrict', 'SchoolDistrictController', ['except' => ['destroy']]);
+    Route::resource('class', 'ClassController', ['except' => ['destroy']]);
+    Route::resource('activity', 'ActivityController', ['except' => ['destroy']]);
+    Route::resource('event', 'EventController');
+    Route::resource('photo', 'PhotoController');
+    Route::resource('attachment', 'AttachmentController');
+    Route::resource('comment', 'CommentController');
+    Route::resource('list', 'ListController');
+    
 });
