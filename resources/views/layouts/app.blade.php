@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>My Binder @yield('title')</title>
     <!-- Modernzr included at top -->
     <script src="{{ asset('js/modernizr.mq.js') }}"></script>
     <!-- Fonts -->
@@ -19,8 +19,7 @@
 
 </head>
 <body id="app-layout">
-    <nav class="navbar navbar-default navbar-home">
-        <div class="container">
+    <nav class="navbar navbar-inverse navbar-home">
             <div class="navbar-header">
 
                 <!-- Collapsed Hamburger -->
@@ -33,14 +32,13 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}" aria-role="banner">
-                    <img src="{{ asset('img/mybinder.png') }}" alt="myBinder Blue Logo" />
+                    <img src="{{ asset('img/mybinder-white.png') }}" alt="myBinder Blue Logo" />
                 </a>
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/home') }}">Home</a></li>
                     <li><a href="{{ url('/student') }}">Student Demo</a></li>
                     <li><a href="{{ url('/teacher') }}">Teacher Demo</a></li>
                     <li><a href="{{ url('/parent') }}">Parent Demo</a></li>
@@ -50,8 +48,9 @@
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
                     @if (Auth::guest())
-                        <li><a href="{{ url('/login') }}">Login</a></li>
-                        <li><a href="{{ url('/register') }}">Register</a></li>
+                       <!-- @todo hiding the login; only demo accounts available
+                       <li><a href="{{ url('/login') }}">Login</a></li>
+                        <li><a href="{{ url('/register') }}">Register</a></li> -->
                     @else
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -66,10 +65,11 @@
                     
                 </ul>
             </div>
-        </div>
     </nav>
 
-    @yield('content')
+    <article class="lined-page">
+        @yield('content')
+    </article>
 
     @section('javascript')
     <!-- JavaScripts -->
@@ -77,6 +77,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="{{ asset('js/jquery.joyride-2.1.js') }}"></script>
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
-    @stop
+    @show
 </body>
 </html>
