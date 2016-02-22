@@ -1,5 +1,7 @@
 #myBinder
 
+Demo: http://169.44.65.248/mybinder/public/
+
 ## What is my binder?
 
 Teachers have their lesson plans on paper, hand-written out usually. That has to go to a substitute teacher who may or may not be able to read it. It has to last the year through coffee and grading papers. 
@@ -19,5 +21,12 @@ MyBinder is a web application built with teachers, students and parents in mind.
 - jQuery
 - Twitter Bootstrap (less)
 - FontAwesome
-- Moment
-- Joyride
+- Moment.js (included but not in use)
+- Joyride.js (included but not in use)
+- 
+## Next Steps/To-Do
+
+- Views are only prototypes or static displays; Finish connecting the database to the Views
+- Add in the interactions to add classes, events, activities
+- Add in the interactions to add comments, attachments, photos and lists to classes, events and activities
+- Find something other than event to call items like quizzes, tests, games and assignments
