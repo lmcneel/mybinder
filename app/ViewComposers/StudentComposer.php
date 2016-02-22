@@ -22,8 +22,8 @@ class StudentComposer{
     public function __construct(Guard $auth){
         $this->auth = $auth;
         $this->user = $this->auth->user();
-        $this->classes = $this->auth->user()->classes()->get();
-        $this->activities = $this->auth->user()->activities()->get();
+        $this->classes = $this->auth->user()->classes()->with('Events')->get();
+        $this->activities = $this->auth->user()->activities()->with('Events')->get();
     }
     
     public function compose(View $view){

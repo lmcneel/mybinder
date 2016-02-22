@@ -13,6 +13,8 @@ class ComposerServiceProvider extends ServiceProvider{
     public function boot(){
         //Using class based Composers 
         view()->composer('student', 'App\ViewComposers\StudentComposer');
+        view()->composer('teacher', 'App\ViewComposers\TeacherComposer');
+        view()->composer('parent', 'App\ViewComposers\ParentComposer');
     }
     
     /**
