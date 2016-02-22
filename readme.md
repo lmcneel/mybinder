@@ -23,7 +23,8 @@ MyBinder is a web application built with teachers, students and parents in mind.
 - FontAwesome
 - Moment.js (included but not in use)
 - Joyride.js (included but not in use)
-- 
+
+
 ## Next Steps/To-Do
 
 - Views are only prototypes or static displays; Finish connecting the database to the Views
