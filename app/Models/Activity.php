@@ -20,10 +20,10 @@ class Activity extends Model
      * 
      * @var array 
      */
-     protected $dates = [
-        'create_at', 'updated_at', 'start_date', 'end_date', 'start_time','end_time'
+/*     protected $dates = [
+        'create_at', 'updated_at', 'start_date', 'end_date'
     ];
-    
+    */
     /**
      * The relationships for activities
      */

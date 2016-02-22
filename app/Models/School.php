@@ -12,7 +12,7 @@ class School extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'logo', 'mascot', 'mascot_uri', 'color1', 'color2', 'telephone', 'address_line1', 'address_line2', 'city', 'state_code', 'country_code',
+        'name', 'logo', 'mascot', 'mascot_uri', 'color1', 'color2', 'telephone', 'geolat', 'geolong', 'street_address', 'city', 'state_code', 'country_code',
         'postal_code', 'start_grade', 'end_grade', 'school_type'
     ];
      

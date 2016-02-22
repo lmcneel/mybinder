@@ -28,10 +28,10 @@ class Classes extends Model
      * 
      * @var array 
      */
-    protected $dates = [
-        'created_at', 'updated_at', 'start_date', 'end_date', 'start_time', 'end_time'
+/*    protected $dates = [
+        'created_at', 'updated_at', 'start_date', 'end_date'
     ];
-    
+    */
     /**
      * Set up relationships for this Model
      */
@@ -57,7 +57,7 @@ class Classes extends Model
      */
      
     public function users(){
-        return $this->belongsToMany('App\Models\User', 'class_user');
+        return $this->belongsToMany('App\Models\User', 'class_user', 'user_id', 'class_id');
     }
      
     /**

@@ -22,8 +22,9 @@ class CreateSchoolsTable extends Migration
             $table->string('color1')->nullable();
             $table->string('color2')->nullable();
             $table->string('telephone')->nullable();
-            $table->string('address_line1')->nullable();
-            $table->string('address_line2')->nullable();
+            $table->double('geolat',10,6)->nullable();
+            $table->double('geolong',10,6)->nullable();
+            $table->string('street_address')->nullable();
             $table->string('city')->nullable();
             $table->string('state_code')->nullable();
             $table->string('country_code')->nullable();

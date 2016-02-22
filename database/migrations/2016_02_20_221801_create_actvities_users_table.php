@@ -12,7 +12,7 @@ class CreateActvitiesUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('actvities_users', function (Blueprint $table) {
+        Schema::create('activities_users', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('activity_id')->unsigned()->references('id')->on('activities');
             $table->integer('user_id')->unsigned()->references('id')->on('users');
@@ -27,6 +27,6 @@ class CreateActvitiesUsersTable extends Migration
      */
     public function down()
     {
-        Schema::drop('actvities_users');
+        Schema::drop('activities_users');
     }
 }

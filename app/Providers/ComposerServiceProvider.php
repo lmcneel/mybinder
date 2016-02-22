@@ -12,9 +12,7 @@ class ComposerServiceProvider extends ServiceProvider{
      */
     public function boot(){
         //Using class based Composers 
-        view()->composer([
-        
-        ]);
+        view()->composer('student', 'App\ViewComposers\StudentComposer');
     }
     
     /**

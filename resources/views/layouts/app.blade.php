@@ -19,7 +19,7 @@
 
 </head>
 <body id="app-layout">
-    <nav class="navbar navbar-inverse navbar-home">
+    <nav class="navbar navbar-inverse navbar-home navbar-fixed-top">
             <div class="navbar-header">
 
                 <!-- Collapsed Hamburger -->
@@ -66,10 +66,22 @@
                 </ul>
             </div>
     </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                <ul class="nav nav-sidebar nav-pills nav-stacked">
+                    <li><button class="btn btn-primary btn-lg btn-block"><span class="fa fa-gear"></span>Settings</button></li>
+                </ul>
+                @yield('sidebar')
+            </div>
 
-    <article class="lined-page">
-        @yield('content')
-    </article>
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <article class="lined-page">
+                    @yield('content')
+                </article>
+            </div>
+        </div>
+    </div>
 
     @section('javascript')
     <!-- JavaScripts -->

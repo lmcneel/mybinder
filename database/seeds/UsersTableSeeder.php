@@ -12,25 +12,15 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-/*        DB::table('users')->insert([
-            'name' => 'Student Demo Account',
-            'email' => 'studentDemo@domain.com',
-            'password' => bcrypt('secret'),
-            'role_id' => 1
-        ]);
+        factory(App\Models\User::class, 'studentDemo',1)->create()->each(function($u){
+        });
         
-        DB::table('users')->insert([
-            'name' => 'Teacher Demo Account',
-            'email' => 'teacherDemo@domain.com',
-            'password' => bcrypt('secret'),
-            'role_id' => 2
-        ]);*/
+        factory(App\Models\User::class, 'teacherDemo',1)->create()->each(function($u){
+
+        });
         
-        DB::table('users')->insert([
-            'name' => 'Parent Demo Account',
-            'email' => 'parentDemo@domain.com',
-            'password' => bcrypt('secret'),
-            'role_id' => 3
-        ]);
+        factory(App\Models\User::class, 'parentDemo',1)->create()->each(function($u){
+        });
+        
     }
 }

@@ -43,6 +43,17 @@ class User extends Authenticatable
     }
     
     /**
+     * A user relationships
+     */
+    public function belongsToUsers(){
+        return $this->belongsToMany('App\Models\User', 'user_relations', 'user_id', 'belongsTo_user_id');
+    }
+    
+    public function hasUsers(){
+        return $this->belongsToMany('App\Models\User', 'user_relations', 'belongsTo_user_id', 'user_id');
+    }
+    
+    /**
      * A user has many events
      */
     public function createdEvents(){
@@ -75,7 +86,7 @@ class User extends Authenticatable
      * A user can have many school districts
      */
     public function schoolDistrict(){
-        return $this->hasManyThrough('App\Models\SchoolDistrict', 'App\Models\Schools');
+        return $this->hasManyThrough('App\Models\SchoolDistrict', 'AApp\Models\Schools');
     }
       
     /**
@@ -96,7 +107,7 @@ class User extends Authenticatable
      * A user belongs to many classes
      */
     public function classes(){
-        return $this->belongsToMany('App\Models\Classes', 'class_user');
+        return $this->belongsToMany('App\Models\Classes', 'class_user', 'class_id', 'user_id');
     }
         
     /**

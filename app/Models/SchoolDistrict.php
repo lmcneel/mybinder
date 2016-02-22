@@ -12,7 +12,7 @@ class SchoolDistrict extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'geolat', 'geolong', 'address_line1', 'address_line2', 'city', 'state_code', 'country_code', 'postal_code', 'telephone'
+        'name', 'geolat', 'geolong', 'street_address', 'city', 'state_code', 'country_code', 'postal_code', 'telephone'
     ];
      
     /**
